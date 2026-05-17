@@ -1,4 +1,4 @@
-import { ListingCard } from "@/components/listings/ListingCard";
+import { ListingCard } from "@/components/listings/listingCard";
 import { mockListings } from "@/lib/mockListings";
 
 export default function Home() {
