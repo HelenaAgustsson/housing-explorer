@@ -1,3 +1,4 @@
+import { MainFilter } from "@/components/filters/mainFilter";
 import { ListingCard } from "@/components/listings/listingCard";
 import { mockListings } from "@/lib/mockListings";
 
@@ -8,7 +9,7 @@ export default function Home() {
         <h1 className="mb-8 text-4xl font-bold tracking-tight">
           Trondheim Housing Explorer
         </h1>
-
+        <MainFilter />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {mockListings.map((listing) => (
             <ListingCard

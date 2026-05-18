@@ -18,6 +18,7 @@ export function ListingCard({ listing }: Props) {
                     alt={listing.title}
                     fill
                     className="object-cover"
+                    loading="eager"
                 />
             </div>
 
