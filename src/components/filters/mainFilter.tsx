@@ -1,9 +1,14 @@
 import { BedroomFilter } from "./bedroomFilter";
+import { ListingFilters } from "@/lib/types";
 
-export function MainFilter() {
+type FiltersProps = {
+    filters: ListingFilters;
+};
+
+export function MainFilter({ filters }: FiltersProps) {
     return (
         <div className="flex gap-4 my-4">
-            <BedroomFilter />
+            <BedroomFilter bedrooms={filters.bedrooms} />
         </div>
     );
 };

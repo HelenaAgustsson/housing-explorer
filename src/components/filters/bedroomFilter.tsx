@@ -1,33 +1,34 @@
 "use client";
 
 import {
-    DropdownMenu,
-    DropdownMenuTrigger,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuLabel,
-    DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+import { ListingFilters } from "@/lib/types";
 
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+type BedroomFilterProps = Pick<ListingFilters, "bedrooms">;
 
-export function BedroomFilter() {
+export function BedroomFilter({ bedrooms }: BedroomFilterProps) {
     return (
-        <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-                <Button variant="outline">
-                    Number of bedrooms
-                    <ChevronDown className="h-4 w-4" />
-                </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-                <DropdownMenuGroup>
-                    <DropdownMenuLabel>1+</DropdownMenuLabel>
-                    <DropdownMenuItem>2+</DropdownMenuItem>
-                    <DropdownMenuItem>3+</DropdownMenuItem>
-                </DropdownMenuGroup>
-            </DropdownMenuContent>
-        </DropdownMenu>
+        <Select>
+            <SelectTrigger className="w-full max-w-48">
+                <SelectValue placeholder="Select number of bedrooms" />
+            </SelectTrigger>
+            <SelectContent>
+                <SelectGroup>
+                    <SelectLabel>Bedrooms</SelectLabel>
+                    {bedrooms.map((bedroom) => (
+                        <SelectItem key={bedroom} value={bedroom.toString()}>
+                            {bedroom}{" "}bedroom{bedroom > 1 ? "s" : ""}
+                        </SelectItem>
+                    ))}
+                </SelectGroup>
+            </SelectContent>
+        </Select>
     );
 }; 

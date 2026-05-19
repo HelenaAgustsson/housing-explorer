@@ -11,9 +11,6 @@ export type Listing = {
   imageUrl: string;
 };
 
-type ListingFilters = {
-  neighbourhood: string;
-  maxPrice: number | null;
-  bedrooms: number | "any";
-  orientation: "any" | "north" | "south" | "east" | "west";
+export type ListingFilters = {
+  bedrooms: number[];
 };

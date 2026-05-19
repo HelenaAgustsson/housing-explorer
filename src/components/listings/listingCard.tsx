@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { Listing } from "@/lib/types";
-
 import { Card, CardContent, } from "@/components/ui/card";
-
 import { Badge } from "@/components/ui/badge";
 
 type Props = {
