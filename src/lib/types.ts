@@ -10,3 +10,7 @@ export type Listing = {
   commuteMinutes: number;
   imageUrl: string;
 };
+
+export type ListingFilters = {
+  bedrooms: number[];
+};
