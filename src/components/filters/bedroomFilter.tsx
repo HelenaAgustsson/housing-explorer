@@ -11,12 +11,12 @@ import {
 } from "@/components/ui/select"
 import { ListingFilters } from "@/lib/types";
 
-type BedroomFilterProps = Pick<ListingFilters, "bedrooms"> & {
+type bedroomFilterProps = Pick<ListingFilters, "bedrooms"> & {
     selectedBedrooms: number | null;
     onBedroomsChange: (bedrooms: number | null) => void;
 };
 
-export function BedroomFilter({ bedrooms, selectedBedrooms, onBedroomsChange }: BedroomFilterProps) {
+export function BedroomFilter({ bedrooms, selectedBedrooms, onBedroomsChange }: bedroomFilterProps) {
     return (
         <Select
             value={selectedBedrooms?.toString() || undefined}
