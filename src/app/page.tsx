@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { BedroomFilter } from "@/components/filters/bedroomFilter";
-import { ListingCard } from "@/components/listings/listingCard";
+import { BedroomFilter } from "@/components/filters/BedroomFilter";
+import { ListingCard } from "@/components/listings/ListingCard";
 import { mockListings } from "@/lib/mockListings";
 import { mockFilters } from "@/lib/mockFilters";
 
